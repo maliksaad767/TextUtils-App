@@ -3,8 +3,8 @@ import TextForm from './components/TextForm';
 import About from './components/About';
 import Navbar from './components/Navbar';
 import { useState } from 'react';
-// import { BrowserRouter, Routes, Route } from 'react-router-dom'; old code
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 
@@ -27,7 +27,7 @@ function App() {
       <Navbar title='TextUtils' About='About Us' mode={mode} togglemode={togglemode} />
       <div className="container my-3">
         <Routes>
-          <Route path="/TextUtils-App" element={<TextForm heading='Enter the text to analyze below' mode={mode} />} />
+          <Route path="/" element={<TextForm heading='Enter the text to analyze below' mode={mode} />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
